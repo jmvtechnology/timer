@@ -10,12 +10,18 @@ var App = {
         this.$playpause = $('#playpause');
         this.$restart = $('#restart');
         this.$open = $('#open');
+        this.$preA = $('#pre-a');
+        this.$preB = $('#pre-b');
+        this.$preC = $('#pre-c');
 
         this.$less.on('click', this.clickOnLess.bind(this));
         this.$more.on('click', this.clickOnMore.bind(this));
         this.$playpause.on('click', this.clickOnPlayPause.bind(this));
         this.$restart.on('click', this.clickOnRestart.bind(this));
         this.$open.on('click', this.openWindow.bind(this));
+        this.$preA.on('click', this.clickOnPrefixedTime.bind(this, 30));
+        this.$preB.on('click', this.clickOnPrefixedTime.bind(this, 40));
+        this.$preC.on('click', this.clickOnPrefixedTime.bind(this, 60));
 
         setInterval(this.interval.bind(this), 1000);
     },
@@ -34,6 +40,11 @@ var App = {
         this.timeSet += 10;
         this.time = this.timeSet;
         this.renderTimer();
+    },
+
+    clickOnPrefixedTime : function(time) {
+        this.timeSet = time;
+        this.clickOnRestart();
     },
 
     renderTimer : function() {

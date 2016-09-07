@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="portview" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Timer</title>
+        <style>
+            @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 0px;
+                padding: 0px;
+                color: #EEEEEE;
+                background-color: #212121;
+                font-size: 40px;
+                font-family: Arial;
+                height: 100vh;
+            }
+
+            body > * {
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+
+            button {
+                color: #EEEEEE;
+                border-radius: 5px;
+                border: 0px;
+                background-color: #424242;
+                font-size: 40px;
+                padding: 7px 15px;
+            }
+
+            button[disabled] {
+                color: #CCC;
+                opacity: .5;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button id="less">
+                <i class="ion-minus-round"></i>
+            </button>
+            <span id="timer">00:00:30</span>
+            <button id="more">
+                <i class="ion-plus-round"></i>
+            </button>
+        </div>
+        <div>
+            <button id="playpause" disabled>
+                <i class="ion-play"></i>
+            </button>
+            <button id="restart" disabled>
+                <i class="ion-refresh"></i>
+            </button>
+            <button id="open">
+                Start
+            </button>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

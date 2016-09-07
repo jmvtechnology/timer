@@ -13,6 +13,7 @@ var App = {
         this.$preA = $('#pre-a');
         this.$preB = $('#pre-b');
         this.$preC = $('#pre-c');
+        this.$preD = $('#pre-d');
 
         this.$less.on('click', this.clickOnLess.bind(this));
         this.$more.on('click', this.clickOnMore.bind(this));
@@ -22,6 +23,7 @@ var App = {
         this.$preA.on('click', this.clickOnPrefixedTime.bind(this, 30));
         this.$preB.on('click', this.clickOnPrefixedTime.bind(this, 40));
         this.$preC.on('click', this.clickOnPrefixedTime.bind(this, 60));
+        this.$preD.on('click', this.clickOnPrefixedTime.bind(this, 90));
 
         setInterval(this.interval.bind(this), 1000);
     },
